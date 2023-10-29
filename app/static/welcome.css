@@ -1,0 +1,31 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 45vh;
+}
+
+.jumbotron {
+    border: 2px solid #333; /* Add a border to create a square shape */
+    border-radius: 10px; /* Rounded corners for a nicer appearance */
+    padding: 50px;
+    text-align: center;
+    background-color: #f5f5f5;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3); /* Add a shadow for depth */
+}
+
+.nav-link{
+    margin-left: 1550px;
+    margin-top: 10px;
+}
+
+table {
+    width: 80%; /* Adjust the width as needed */
+    border-collapse: collapse;
+    margin: 20px; /* Add margin for spacing */
+}
+th, td {
+    padding: 10px; /* Adjust cell padding as needed */
+    text-align: center; /* Center cell content */
+    border: 1px solid #000; /* Add cell borders */
+}

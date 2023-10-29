@@ -1,0 +1,41 @@
+/* .container{
+    margin-top: 200px;
+} */
+
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.jumbotron {
+    border: 2px solid #333; /* Add a border to create a square shape */
+    border-radius: 10px; /* Rounded corners for a nicer appearance */
+    padding: 100px;
+    text-align: center;
+    background-color: #f5f5f5;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3); /* Add a shadow for depth */
+}
+
+
+/* label, input {
+    display: block;
+    margin-bottom: 5px;
+}
+
+button {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}  */
+
+
+/* 
+h2{
+    background-color: yellow;
+} */

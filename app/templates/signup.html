@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/mystyle.css">
+    <title>LOGIN PAGE</title>
+
+    <script>
+            function signupvalidate() {
+                console.log("STARTED")
+                var username = document.getElementById("username").value;
+                var password = document.getElementById("password").value;
+                var mobile = document.getElementById("phone").value;
+
+                if (username === "" || password === "" || mobile === "") {
+                    alert("Please fill out all required fields.");
+                    return false;
+                }
+            const data = {
+                username: username,
+                password: password,
+                phone: mobile
+            };
+
+            fetch('/signup', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.message) {
+                    window.location.href = "/welcome";
+                } else {
+                    alert(data.error);
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+
+            return false;
+        }
+
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="jumbotron">
+             <h2>SIGNUP PAGE</h2><br>
+        <form method="POST">
+            <label for="username">Username:</label>
+            <input type="text"  id="username" name="username" required><br><br>
+            <label for="password">Password:</label>
+            <input type="password"  id="password" name="password" required><br><br>
+            <label for="phone">Mobile:</label>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp;
+            <input type="text" id="phone" name="phone"><br><br>
+            <input type="submit" name="login" value="Submit" onclick="return signupvalidate()">
+        </form>
+    </div>
+</div>
+</body>
+</html>
